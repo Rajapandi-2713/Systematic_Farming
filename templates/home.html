@@ -1,6 +1,7 @@
 <!DOCTYPE html>
-<html lang="en">
 {% load static %}
+<html lang="en">
+
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
@@ -10,7 +11,7 @@
   <meta content="" name="keywords">
 
   <!-- Favicons -->
-  <link href={% static "assets/img/sitei.png"  %} rel="icon">
+  <link href={% static "assets/img/sitei.png" %} rel="icon">
   <link href={% static "assets/img/apple-touch-icon.png" %} rel="apple-touch-icon">
 
   <!-- Google Fonts -->
@@ -45,17 +46,24 @@
         <h1>Agri Planet</h1>
       </a>
 
-      <nav id="navbar" class="navbar"> <!-- Navbar -->
-
+      <nav id="navbar" class="navbar"> <!-- navbar -->
         <ul>
-          <li><a href="#hero">Home</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#services">Services</a></li>
-          <li><a href="#team">Team</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
 
-      </nav> <!-- end navbar -->
+          <li><a href="#hero">Home</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#contact">Contact</a></li>
+
+          <li class="dropdown">
+            <a href="#" data-toggle="dropdown" class="dropdown-toggle user-action"><img src="https://www.tutorialrepublic.com/examples/images/avatar/2.jpg" class="avatar" alt="Avatar"> Paula Wilson </a>
+            <ul class="dropdown-menu">
+              <li><a href="#"><i class="fa fa-upload"></i> Update Profile</a></li>
+              <li class="divider"></li>
+              <li><a href="#"><i class="fa fa-sign-out" style="font-size:15px"></i>Logout</a></li>
+            </ul>
+          </li>
+
+        </ul>
+      </nav>
 
       <i class="mobile-nav-toggle mobile-nav-show bi bi-list"></i>
       <i class="mobile-nav-toggle mobile-nav-hide d-none bi bi-x"></i>
@@ -64,68 +72,30 @@
   </header> <!-- End Header -->
 
   <!-- ======= Hero Section ======= -->
-
   <section id="hero" class="hero">
-
     <div class="container position-relative">
-
       <div class="row gy-5" data-aos="fade-in">
-
         <div class="col-lg-6 order-2 order-lg-1 d-flex flex-column justify-content-center text-center text-lg-start">
-          <h2>Welcome to Agri-Planet</h2>
-          <p>In the world of farming, knowledge is the key. We're here to help you unlock the secrets of successful farming. Let's work together to make the fields fruitful for generations to come.</p>
+          <h2>Welcome to Agri Planet</h2>
+          <p> In the world of farming, knowledge is the key. We're here to help you unlock the secrets of successful farming. Let's work together to make the fields fruitful for generations to come.</p>
           <div class="d-flex justify-content-center justify-content-lg-start">
-            <a href="login.html" class="btn-get-started">Get Started</a></div>
+            <a href="#services" class="btn-get-started">Get Started</a></div>
         </div>
-
         <div class="col-lg-6 order-1 order-lg-2">
           <img src={% static "assets/img/stats-img.png" %} class="img-fluid" alt="" data-aos="zoom-out" data-aos-delay="100">
         </div>
-
       </div>
-
     </div>
-
+    </div>
     <div class="icon-boxes position-relative">
       <div class="container position-relative">
       </div>
-    </div>
-
     </div>
   </section>
   <!-- End Hero Section -->
 
   <main id="main">
 
-    <!-- ======= About Us Section ======= -->
-    <section id="about" class="about">
-      <div class="container" data-aos="fade-up">
-
-        <div class="section-header">
-          <h2>About Us</h2>
-        </div>
-
-        <div class="row content">
-          <div class="col-lg-6">
-            <p>Below, you'll find a range of services tailored to help farmers with various needs</p>
-            <ul>
-              <li><i class="fa-solid fa-chevron-right"></i> Crop Cultivation Instructions</li>
-              <li><i class="fa-solid fa-chevron-right"></i> Crop Recommendation Tool</li>
-              <li><i class="fa-solid fa-chevron-right"></i> Farming Equipment Information</li>
-              <li><i class="fa-solid fa-chevron-right"></i> Crop Disease and Natural Fertilizer</li>
-            </ul>
-          </div>
-          <div class="col-lg-6 pt-4 pt-lg-0">
-            <p>
-              &emsp;&emsp;At Agri-Planet, we are passionate advocates for farmers and the future of agriculture. We are committed to providing a comprehensive resource for farmers, from those just starting their journey to seasoned experts seeking the latest innovations. Our mission is to make the world of agriculture accessible, informative, and dynamic.
-            </p>
-            <a href="#" class="btn-learn-more">Learn More</a>
-          </div>
-        </div>
-
-      </div>
-    </section> <!-- End About Us Section -->
-   
     <!-- ======= Service Section ======= -->
     <section id="services" class="recent-posts sections-bg">
       <div class="container" data-aos="fade-up">
@@ -135,7 +105,7 @@
           <p>Our services are designed to support every aspect of your farming journey.</p>
         </div>
 
-        <div class="row gy-4">
+        <div class="row gy-4"> <!-- Start  list -->
 
           <div class="col-xl-4 col-md-6">
             <article>
@@ -151,7 +121,7 @@
               </h2>
 
             </article>
-          </div> <!-- End post list item -->
+          </div>
 
           <div class="col-xl-4 col-md-6">
             <article>
@@ -167,7 +137,7 @@
               </h2>
 
             </article>
-          </div> <!-- End post list item -->
+          </div>
 
           <div class="col-xl-4 col-md-6">
             <article>
@@ -183,7 +153,7 @@
               </h2>
 
             </article>
-          </div>  <!-- End  list item -->
+          </div>
 
           <div class="col-xl-4 col-md-6">
             <article>
@@ -197,9 +167,8 @@
               <h2 class="title">
                 <a href="plantdisease.html">Crop Disease</a>
               </h2>
-
             </article>
-          </div>  <!-- End  list item -->
+          </div>
 
           <div class="col-xl-4 col-md-6">
             <article>
@@ -213,89 +182,13 @@
               <h2 class="title">
                 <a href="fertilizer.html">Natural Fertilizer</a>
               </h2>
-
             </article>
-          </div>  <!-- End  list item -->
-
-        </div>  <!-- End  list -->
+          </div>
+        </div>      <!-- End  list -->
 
       </div>
     </section><!-- End Service Section -->
-
-   
-    <!-- ======= Our Team Section ======= -->
-    <section id="team" class="team">
-      <div class="container" data-aos="fade-up">
-
-        <div class="section-header">
-          <h2>Our Team</h2>
-          <p>Our development team - turning ideas into reality, one line of code at a time.</p>
-        </div>
-
-        <div class="row gy-4">
-
-          <div class="col-xl-3 col-md-6 d-flex" data-aos="fade-up" data-aos-delay="100">
-            <div class="member">
-              <img src={% static "assets/img/team/team-1.jpg" %} class="img-fluid" alt="">
-              <h4>REVANTHRAMESH S</h4>
-              <span>Backend Developer</span>
-              <div class="social">
-                <a href=""><i class="bi bi-twitter"></i></a>
-                <a href=""><i class="bi bi-facebook"></i></a>
-                <a href=""><i class="bi bi-instagram"></i></a>
-                <a href=""><i class="bi bi-linkedin"></i></a>
-              </div>
-            </div>
-          </div><!-- End Team Member -->
-
-          <div class="col-xl-3 col-md-6 d-flex" data-aos="fade-up" data-aos-delay="200">
-            <div class="member">
-              <img src= {% static "assets/img/team/team-1.jpg" %} class="img-fluid" alt="">
-              <h4>RAJAPANDIAN P</h4>
-              <span>Frontend Developer</span>
-              <div class="social">
-                <a href=""><i class="bi bi-twitter"></i></a>
-                <a href=""><i class="bi bi-facebook"></i></a>
-                <a href=""><i class="bi bi-instagram"></i></a>
-                <a href=""><i class="bi bi-linkedin"></i></a>
-              </div>
-            </div>
-          </div><!-- End Team Member -->
-
-          <div class="col-xl-3 col-md-6 d-flex" data-aos="fade-up" data-aos-delay="300">
-            <div class="member">
-              <img src={% static "assets/img/team/team-3.jpg" %} class="img-fluid" alt="">
-              <h4>PRAVEEN KUMAR M</h4>
-              <span>Backend Developer</span>
-              <div class="social">
-                <a href=""><i class="bi bi-twitter"></i></a>
-                <a href=""><i class="bi bi-facebook"></i></a>
-                <a href=""><i class="bi bi-instagram"></i></a>
-                <a href=""><i class="bi bi-linkedin"></i></a>
-              </div>
-            </div>
-          </div><!-- End Team Member -->
-
-          <div class="col-xl-3 col-md-6 d-flex" data-aos="fade-up" data-aos-delay="400">
-            <div class="member">
-              <img src={% static "assets/img/team/team-3.jpg" %} class="img-fluid" alt="">
-              <h4>ARJUN YUVANESH R</h4>
-              <span>Frontend Developer</span>
-              <div class="social">
-                <a href=""><i class="bi bi-twitter"></i></a>
-                <a href=""><i class="bi bi-facebook"></i></a>
-                <a href=""><i class="bi bi-instagram"></i></a>
-                <a href=""><i class="bi bi-linkedin"></i></a>
-              </div>
-            </div>
-          </div><!-- End Team Member -->
-        </div>
-
-      </div>
-    </section><!-- End Our Team Section -->
-
     
-
     <!-- ======= Contact Section ======= -->
     <section id="contact" class="contact">
       <div class="container" data-aos="fade-up">
@@ -343,7 +236,7 @@
       </div>
     </section><!-- End Contact Section -->
 
-  </main><!-- End #main -->
+  </main>   <!-- End main -->
 
   <!-- ======= Footer ======= -->
   <footer id="footer" class="footer">
@@ -352,7 +245,7 @@
       <div class="row">
 
         <div class="col-lg-4 col-md-6 footer-contact">
-            <span><img class="sitelogo" src={% static "assets/img/1.png" %} alt="Logo"></span>
+            <span><img class="sitelogo" src={% static "assets/img/1.png" %} alt="Logo"></span> 
         </div>
 
         <div class="col-lg-4 col-md-6 footer-links">
@@ -391,13 +284,14 @@
     </div>
 
   </footer>
+  <!-- End Footer -->
+  
 
   <a href="#" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
   <div id="preloader"></div>
 
   <!-- Vendor JS Files -->
-  <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
   <script src={% static "assets/vendor/bootstrap/js/bootstrap.bundle.min.js" %}></script>
   <script src={% static "assets/vendor/aos/aos.js" %}></script>
   <script src={% static "assets/vendor/glightbox/js/glightbox.min.js" %}></script>

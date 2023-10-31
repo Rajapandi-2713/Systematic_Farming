@@ -1,0 +1,53 @@
+<html lang="en">
+{% load static %}
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- ===== Icons ===== -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+
+    <!-- ===== CSS ===== -->
+    <link rel="stylesheet" href={% static "/assets/css/login_register.css" %}>
+    <title>OTP Form</title>
+
+</head>
+<body class="team spad set-bg" data-setbg={% static "static/img/blog/blog-5.jpg" %}>
+    
+    <!-- ===== ERROR LOG  ===== -->
+    {% if form_error %}
+    <div class="alert alert-danger">
+        <li>{{form_error.error}}</li>
+    </div>
+    {% endif %}
+
+    <div class="container">
+            <div class="form">
+                <span class="title">Recover Password</span>
+
+                <form method="post">
+                    {% csrf_token %}
+                    <div class="input-field">
+                        {{form.otp}}
+                        <i class="bi bi-envelope icon"></i>
+                    </div>
+    
+                    <div class="input-field button">
+                        <input type="submit" value="Submit">
+                    </div>
+                    
+                </form>
+
+                <div class="login-signup">
+                    <span class="text">Don't want to Reset? 
+                        <a href="{% url "login" %}" class="text">Back to Login</a>
+                    </span>
+                </div>
+            </div>
+    </div>
+
+    <script src={% static "static/js/scripts.js" %}></script>
+
+</body>
+</html>

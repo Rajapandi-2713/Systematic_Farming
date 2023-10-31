@@ -1,0 +1,67 @@
+<html lang="en">
+{% load static %}
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- ===== Icons ===== -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+    
+    <!-- ===== CSS ===== -->
+    <link rel="stylesheet" href="{% static "/assets/css/login_register.css" %}">
+    <title>Login Form</title>
+
+</head>
+
+<body class="team spad set-bg" data-setbg={% static "static/img/blog/blog-5.jpg" %}>
+    
+    <!-- ===== ERROR LOG  ===== -->
+    {% if form_error %}
+    <div class="alert alert-danger">
+        <li>{{form_error.error}}</li>
+    </div>
+    {% endif %}
+
+    <!-- ===== LOGIN FORM ===== -->
+    <div class="container">
+            <div class="form">
+                <span class="title">Login</span>
+
+                <form method="post" action="{{ action_url }}">
+                    {% csrf_token %}
+                    <div class="input-field">
+                        {{ form.email }}
+                        <i class="bi bi-envelope icon"></i>
+                    </div>
+                    <div class="input-field">
+                        {{ form.password }}
+                        <i class="bi bi-lock icon"></i>
+                        <i class="bi bi-eye-slash showHidePw"></i>
+                    </div>
+
+                    <div class="checkbox-text">
+                        <a href="{% url "forgot-password" %}" class="text">Forgot password?</a>
+                    </div>
+
+                    <div class="input-field button">
+                        <input type="submit" value="Login">
+                    </div>
+                   
+                        <div class="alert alert-secondary" role="alert">
+                            <p style="text-align: center;"></p>
+                        </div>
+                </form>
+
+                <div class="login-signup">
+                    <span class="text">Not a member?
+                        <a href="{% url "register" %}" class="text">Signup Now</a>
+                    </span>
+                </div>
+            </div>
+    </div>
+
+    <script src={% static "static/js/scripts.js" %}></script>
+
+</body>
+</html>
